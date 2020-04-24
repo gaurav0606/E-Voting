@@ -1,0 +1,24 @@
+create database voting_db;
+
+use voting_db;
+
+create table login(userid varchar(100), password varchar(20));
+
+create table users(fname varchar(50),lname varchar(50), emailid varchar(100), mobile varchar(10));
+
+
+create table election(ecode varchar(20), title varchar(100), description varchar(500) ,voting_date date);
+
+create table candidate(cno varchar(20),name varchar(100),emailid varchar(100), mobile varchar(10), fathername varchar(100), age int,election varchar(50), intro varchar(1000), promise varchar(1000), symbol longblob, pic longblob,status varchar(20));
+
+create table feedback(name varchar(100), emailid varchar(50) ,mobile varchar(10),feedback varchar(500));
+
+create table votes(userid varchar(100), cno varchar(20), title varchar(100));
+
+create table result(title varchar(100),winner varchar(100));
+
+
+insert into login values('shashanknambiar18@evoting.com' ,'admin123');
+
+insert into users values('admin' ,'admin','shashanknambiar18@evoting.com','9999999999');
+		
